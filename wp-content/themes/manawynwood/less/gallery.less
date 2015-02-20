@@ -1,0 +1,239 @@
+@import '../css/galleryPlug.css';
+@import '../css/blueimp-gallery.css';
+
+html, body {
+	&.gallery-main {
+		background: @w-black;
+		header {
+			background: @w-black;
+			.logo {
+				h1 {
+					color: @w-white;
+				}
+			}
+			nav {
+				.social {
+					ul {
+						li {
+							a {
+								&.twitter {
+									background-position: left -194px!important;
+								}
+								
+								&.facebook {
+									background-position: left -243px!important;
+								}
+								
+								&.instagram {
+									background-position: left -292px!important;
+								}
+								
+								&.vimeo {
+									background-position: left -340px!important;
+								}
+							}
+						}
+					}
+				}
+				a {
+					&.button {
+						border-bottom: 1px solid @w-black;
+						&:hover, &.active {
+							color: @w-white;
+							border-bottom: 1px solid @w-white;
+						}
+					}
+				}
+			}
+		}
+		.contact-container {
+			background: @w-black;
+			border-bottom: 1px solid @w-white;
+			.get-in-touch {
+				color: @w-white;
+				h2 {
+					color: @w-white;
+				}
+				p {
+					color: @w-white;
+				}
+			}
+			.container-ajax {
+				.form-content {
+					color: @w-white;
+					h3 {
+						color: @w-white;
+					}
+					p {
+						color: @w-white;
+					}
+					input[type="submit"] {
+						border-bottom: 1px solid @w-white;
+						color: @w-white;
+						&:hover {
+							background: @w-white;
+							color: @w-black;
+						}
+					}
+				}
+			}
+		}
+		.grid-wrap {		
+			width: 100%;
+			max-width: 100%;
+			.blueimp-gallery-controls {
+				.close {
+					color: red;
+					font-size: 5em;
+					font-weight: normal;
+					font-family: HelveticaNeueUltraLight;
+				}
+				.next, .prev {
+					background: url('../img/png/sprites.png') no-repeat 10px -762px;
+					text-indent: -9999px;
+					border-radius: 0;
+					width: 50px;
+					height: 50px;
+					margin-top: 250px;
+				}
+				.next {
+					border: none;
+				}
+				.prev {
+					background-position: 16px -857px;
+					border: 0;
+					right: 120px;
+					left: auto;
+				}
+			}
+			.grid {
+				li {
+
+					transition: all .3s ease-out;
+					-webkit-transition: all .3s ease-out;
+					-moz-transition: all .3s ease-out;
+					
+					&.shown {
+						&:hover > a::before {
+							background: url('../img/full-size.png') no-repeat center @w-black-alpha;
+						}
+					}
+					h3 {
+						background: @w-white-alpha;
+						color: @w-black;
+						padding: 10px;
+						text-align: left;
+						font-family: 'HelveticaNeueCondensedBold';
+						font-size: 1em;
+						letter-spacing: 0;
+						font-weight: normal;
+					}
+					a {
+						background: @w-black-alpha;
+					}
+				}
+				.curtain {
+					z-index: 9;
+					background: @w-black-alpha;
+				}
+			}
+		}
+	}  
+}
+
+@media screen and (min-width:300px) and (max-width: 1020px) {
+body {
+	&.gallery-main {
+		header {
+				h3 {
+					display: block;
+					background-position: 0 -975px!important;
+				}
+				.overlay-menu {
+					transition: all .3s ease-out;
+					-webkit-transition: all .3s ease-out;
+					-moz-transition: all .3s ease-out;
+					
+					&.active {
+						background: @w-white-alpha-20;
+						display: block;
+						opacity: 1;
+						filter: alpha(opacity=100);
+					}
+
+				}
+				nav.nav-bar {
+					visibility: hidden;
+					opacity: 0;
+					filter: alpha(opacity=00);
+					transition: all .3s ease-out;
+					-webkit-transition: all .3s ease-out;
+					-moz-transition: all .3s ease-out;
+					
+					width: 300px;
+					
+					&.active {
+						opacity: 1;
+						filter: alpha(opacity=100);
+						visibility: visible;
+						height: 100%;
+						background: @w-black!important;
+						position: fixed;
+						right: 0;
+						top: 0;
+						padding-top: 30px;
+
+						.close-menu {
+							display: block;
+							text-align: center;
+							font-size: 3em;
+							background: @w-gray-soft;
+							width: 52px;
+							padding: 0 0 8px 0;
+							margin: 0 15px 0 0px;
+							line-height: 41px;
+							float: right;
+						}
+						.social {
+							&.right {
+								padding-bottom: 15px;
+								margin-bottom: 15px!important;
+								border-bottom: 1px solid @w-gray-soft;
+							}
+							.suscribe {
+								width: 271px;
+								padding: 0;
+								input {
+									width: 230px;
+									height: 40px;
+								}
+								button {
+									background-position: left -372px;
+									width: 29px;
+									height: 40px;
+								} 
+							}
+							ul {
+								width: 100%;
+								text-align: left;
+								padding-left: 25px;
+								li {
+									float: none;
+									display: inline-block;
+								}
+
+							}
+						}
+						a {
+							width: 100%;
+							text-align: left;
+							padding-left: 20px;
+							padding-bottom: 10px;
+							margin-bottom: 15px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
