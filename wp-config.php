@@ -22,7 +22,11 @@ define('DB_NAME', 'manawynwood');
 define('DB_USER', 'root');
 
 /** MySQL database password */
+<<<<<<< Updated upstream
 define('DB_PASSWORD', '');
+=======
+define('DB_PASSWORD', 'root');
+>>>>>>> Stashed changes
 
 /** MySQL hostname */
 define('DB_HOST', 'localhost');
