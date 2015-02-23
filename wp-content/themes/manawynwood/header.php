@@ -32,6 +32,48 @@
 
 <body <?php body_class(); ?>>
 	<div id="page" class="hfeed site">
+		<div class="loader"></div>
+	    <header>
+	        <div class="contact-container" id="contact-container">
+	            <a class="close" href="#">close</a>
+	            <div class="container-ajax"></div>
+	        </div>
+	        <div class="row">
+	            <div class="large-5 columns logo">
+	                <a href="index.html">home</a>
+	                <img class="left" src="img/svg/logo.svg">
+	               <h1 class="left" >Mana<span>Wynwood</span></h1>
+	            </div>
+	            <h3>main menu</h3>
+	            <span class="overlay-menu"></span>
+
+	            <nav id="menu" class="nav-bar main-menu large-6 columns right">
+	                <div class="large-12 columns social right">
+	                    <ul class="large-4 columns right">
+	                        <li><a class="twitter"   href="#"></a></li>
+	                        <li><a class="facebook"  href="#"></a></li>
+	                        <li><a class="instagram" href="#"></a></li>
+	                        <li><a class="linkedin"  href="#"></a></li>
+	                    </ul>
+	                    <div class="suscribe large-4 columns right">
+	                        <input type="text" placeholder="subscribe">
+	                        <button>  </button>
+	                    </div>
+	                </div>
+
+	                <a href="#" class="link button contact-button">Contact</a>
+	                <a href="events.html" class="events link button">Events</a>
+	                <a href="production.html" class="link button">Production</a>
+	                <a href="gallery.html" class="link button">Gallery</a>
+	                <a href="about-us.html" class="link button">About</a>
+	                <a href="index.html" class="link button">Home</a>
+	                <a href="#" class="close-menu">x</a>
+	            </nav>
+	    </header>
+
+
+
+
 		<header id="masthead" class="site-header" role="banner">
 			<a class="home-link" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
 				<h1 class="site-title"><?php bloginfo( 'name' ); ?></h1>

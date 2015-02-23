@@ -170,6 +170,8 @@ function twentythirteen_scripts_styles() {
 		wp_enqueue_script( 'jquery-masonry' );
 
 	// Loads JavaScript file with functionality specific to Twenty Thirteen.
+	wp_enqueue_script( 'jQuery', get_template_directory_uri() . '/js/vendor/jquery.js', array( 'jquery' ), '2014-06-08', true );
+	wp_enqueue_script( 'app', get_template_directory_uri() . '/js/app.js', array( 'jquery' ), '2014-06-08', true );
 	wp_enqueue_script( 'twentythirteen-script', get_template_directory_uri() . '/js/functions.js', array( 'jquery' ), '2014-06-08', true );
 
 	// Add Source Sans Pro and Bitter fonts, used in the main stylesheet.
@@ -177,6 +179,11 @@ function twentythirteen_scripts_styles() {
 
 	// Add Genericons font, used in the main stylesheet.
 	wp_enqueue_style( 'genericons', get_template_directory_uri() . '/genericons/genericons.css', array(), '3.03' );
+	wp_enqueue_style( 'rs', get_template_directory_uri() . '/css/royalslider.css', array(), '3.03' );
+	wp_enqueue_style( 'rsd', get_template_directory_uri() . '/css/rs-default.css', array(), '3.03' );
+	wp_enqueue_style( 'rsm', get_template_directory_uri() . '/css/rs-minimal-white.css', array(), '3.03' );
+	wp_enqueue_style( 'fonudation', get_template_directory_uri() . '/css/foundation.min.css', array(), '3.03' );
+	wp_enqueue_style( 'app', get_template_directory_uri() . '/css/app.css', array(), '3.03' );
 
 	// Loads our main stylesheet.
 	wp_enqueue_style( 'twentythirteen-style', get_stylesheet_uri(), array(), '2013-07-18' );
