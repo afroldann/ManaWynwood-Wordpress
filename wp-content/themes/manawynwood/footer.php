@@ -44,7 +44,7 @@
                         <li><a class="twitter link"   href="#"></a></li>
                         <li><a class="facebook link"  href="#"></a></li>
                         <li><a class="instagram link" href="#"></a></li>
-                        <li><a class="linkedin link"  href="#"></a></li>
+                        <li><a class="vimeo link"  href="#"></a></li>
                     </ul>
                     <h2>LEGAL</h2>
                     <p><a href="img/Privacy-Policy-Temp.pdf" target="_blank">Privacy Policy</a></p>

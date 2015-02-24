@@ -52,7 +52,7 @@
 	                        <li><a class="twitter"   href="#"></a></li>
 	                        <li><a class="facebook"  href="#"></a></li>
 	                        <li><a class="instagram" href="#"></a></li>
-	                        <li><a class="linkedin"  href="#"></a></li>
+	                        <li><a class="vimeo"  href="#"></a></li>
 	                    </ul>
 	                    <div class="suscribe large-4 columns right">
 	                        <input type="text" placeholder="subscribe">
