@@ -794,6 +794,8 @@ html {
 					padding: 0 0 0 20px;
 					position: relative;
 					top: 71px;
+					margin: 0;
+					clear: none;
 					
 					span {
 						color: @w-gray-text;
@@ -803,6 +805,40 @@ html {
 			nav {
 				&.nav-bar {
 					padding: 0;
+					.menu-menu-1-container {
+						.nav-menu {
+							margin: 0;
+							padding: 0;
+							list-style: none;
+
+							li {
+								a {
+									font-family: 'HelveticaNeueCondensedBold', helvetica;
+									color: @w-gray-text;
+									text-decoration: none;
+									text-transform: uppercase;
+									font-style: normal;
+									background: none;
+									padding: 0;
+									margin: 0 10px 0 4px;
+									border-bottom: 1px solid @w-white;
+
+									transition: all .5s ease-out;
+									-webkit-transition: all .5s ease-out;
+									-moz-transition: all .5s ease-out;
+									float: right;
+									font-size: 1.1rem;
+									text-align: right;
+
+									&:hover {
+										background: none;
+										color: @w-black;
+										border-bottom: 1px solid @w-black;
+									}
+								}
+							}
+						}
+					}
 				}
 				.social {
 					position: relative;

@@ -1,55 +1,55 @@
-var oneMore = 0;
-var hammerApp = {};
-var url;
-var getUrl;
-var tiempo;
-var heightHeader = $('header').height() + $('.navigation').height();
-var heightDetails = $('#details').height();
-var heightDescription = $('#description').height();
-var heightHighlights = $('#highlights').height();
-var windowWidth = $(window).width();
-var windowHeight = $(window).height();
-var antes = (new Date()).getTime();
-var htmlContainer = $('html, body');
-
-var isMobile = {
-    Android: function() {
-        return navigator.userAgent.match(/Android/i); }, BlackBerry: function() {
-        return navigator.userAgent.match(/BlackBerry/i); },iOS: function() {
-        return navigator.userAgent.match(/iPhone|iPad|iPod/i); }, Opera: function() {
-        return navigator.userAgent.match(/Opera Mini/i); }, Windows: function() {
-        return navigator.userAgent.match(/IEMobile/i); }, any: function() {
-        return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows()); 
-    }
-}
-var navegador = navigator.userAgent;
-
-$(document).foundation();
-
-function menuProduction(){
-	var village = $( "#production-village" ).offset();
-	var basel = $( "#art-basel" ).offset();
-	var cola = $( "#rc-cola" ).offset();
-	var walk = $( "#art-walk" ).offset();
-
-	jQuery('#production-village-btn').on('click', function(){
-		jQuery(htmlContainer).animate({scrollTop:village.top}, 1000);
-	});	
-
-	jQuery('#art-basel-btn').on('click', function(){
-		$("html, body").animate({ scrollTop: $('#art-basel').offset().top - 200 }, 1000);
-	});
-
-	jQuery('#rc-cola-btn').on('click', function(){
-		jQuery(htmlContainer).animate({scrollTop:cola.top + 365 }, 1000);
-	});
-
-	jQuery('#art-walk-btn').on('click', function(){
-		jQuery(htmlContainer).animate({scrollTop:walk.top}, 1000);
-	});
-}
 
 jQuery(document).ready(function($){
+	var oneMore = 0;
+	var hammerApp = {};
+	var url;
+	var getUrl;
+	var tiempo;
+	var heightHeader = $('header').height() + $('.navigation').height();
+	var heightDetails = $('#details').height();
+	var heightDescription = $('#description').height();
+	var heightHighlights = $('#highlights').height();
+	var windowWidth = $(window).width();
+	var windowHeight = $(window).height();
+	var antes = (new Date()).getTime();
+	var htmlContainer = $('html, body');
+
+	var isMobile = {
+	    Android: function() {
+	        return navigator.userAgent.match(/Android/i); }, BlackBerry: function() {
+	        return navigator.userAgent.match(/BlackBerry/i); },iOS: function() {
+	        return navigator.userAgent.match(/iPhone|iPad|iPod/i); }, Opera: function() {
+	        return navigator.userAgent.match(/Opera Mini/i); }, Windows: function() {
+	        return navigator.userAgent.match(/IEMobile/i); }, any: function() {
+	        return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows()); 
+	    }
+	}
+	var navegador = navigator.userAgent;
+	$(document).foundation();
+
+	function menuProduction(){
+		var village = $( "#production-village" ).offset();
+		var basel = $( "#art-basel" ).offset();
+		var cola = $( "#rc-cola" ).offset();
+		var walk = $( "#art-walk" ).offset();
+
+		jQuery('#production-village-btn').on('click', function(){
+			jQuery(htmlContainer).animate({scrollTop:village.top}, 1000);
+		});	
+
+		jQuery('#art-basel-btn').on('click', function(){
+			$("html, body").animate({ scrollTop: $('#art-basel').offset().top - 200 }, 1000);
+		});
+
+		jQuery('#rc-cola-btn').on('click', function(){
+			jQuery(htmlContainer).animate({scrollTop:cola.top + 365 }, 1000);
+		});
+
+		jQuery('#art-walk-btn').on('click', function(){
+			jQuery(htmlContainer).animate({scrollTop:walk.top}, 1000);
+		});
+	}
+
 	menuProduction();
 
 	jQuery('.plan-detail').zoom();

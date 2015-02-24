@@ -39,36 +39,36 @@ jQuery(document).ready(function($){
 
 	var sliderInstance = sliderJQ.data('royalSlider');
 	var logo = $('.logo img');
-	
+	var $src = 'wp-content/themes/manawynwood/';
     sliderInstance.ev.on('rsAfterSlideChange', function(event) {
 		currSliderNum = sliderInstance.currSlideId; 
 		if(currSliderNum === 0 ){
 			$(logo).fadeOut(550, function(){
-				$(this).attr('src','img/svg/logo.svg').fadeIn(550);
+				$(this).attr('src','wp-content/themes/manawynwood/img/svg/logo.svg').fadeIn(550);
 			});
 			$('.logo h1').show();
 		}
 		if(currSliderNum === 1 ){
 			$(logo).fadeOut(550, function(){
-				$(this).attr('src','img/svg/logo-properties.svg').fadeIn(550);
+				$(this).attr('src','wp-content/themes/manawynwood/img/svg/logo-properties.svg').fadeIn(550);
 			});
 			$('.logo h1').hide();
 		}
 		if(currSliderNum === 2 ){
 			$(logo).fadeOut(550, function(){
-				$(this).attr('src','img/svg/logo.svg').fadeIn(550);
+				$(this).attr('src','wp-content/themes/manawynwood/img/svg/logo.svg').fadeIn(550);
 			});
 			$('.logo h1').hide();
 		}
 		if(currSliderNum === 3 ){
 			$(logo).fadeOut(550, function(){
-				$(this).attr('src','img/svg/logo.svg').fadeIn(550);
+				$(this).attr('src','wp-content/themes/manawynwood/img/svg/logo.svg').fadeIn(550);
 			});
 			$('.logo h1').hide();
 		}		
 		if(currSliderNum === 4 ){
 			$(logo).fadeOut(550, function(){
-				$(this).attr('src','img/svg/logo.svg').fadeIn(550);
+				$(this).attr('src','wp-content/themes/manawynwood/img/svg/logo.svg').fadeIn(550);
 			});
 			$('.logo h1').hide();
 		}

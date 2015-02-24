@@ -31,7 +31,7 @@
 </head>
 
 <body <?php body_class(); ?>>
-		<div class="loader"></div>
+		<!--<div class="loader"></div>-->
 	    <header>
 	        <div class="contact-container" id="contact-container">
 	            <a class="close" href="#">close</a>
@@ -40,7 +40,7 @@
 	        <div class="row">
 	            <div class="large-5 columns logo">
 	                <a href="<?php echo esc_url( home_url( '/' ) ); ?>">home</a>
-	                <img class="left" src="img/svg/logo.svg">
+	                <img class="left" src="<?php bloginfo('template_url')?>/img/svg/logo.svg">
 	               <h1 class="left" >Mana<span>Wynwood</span></h1>
 	            </div>
 	            <h3>main menu</h3>
@@ -60,12 +60,6 @@
 	                    </div>
 	                </div>
 	                <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu' ) ); ?>
-	                <a href="#" class="link button contact-button">Contact</a>
-	                <a href="events.html" class="events link button">Events</a>
-	                <a href="production.html" class="link button">Production</a>
-	                <a href="gallery.html" class="link button">Gallery</a>
-	                <a href="about-us.html" class="link button">About</a>
-	                <a href="index.html" class="link button">Home</a>
 	                <a href="#" class="close-menu">x</a>
 	            </nav>
 	    </header>

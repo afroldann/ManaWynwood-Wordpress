@@ -16,54 +16,21 @@
 
 get_header(); ?>
 
-<section class="main-slider">
+    <section class="main-slider">
         <div id="mana-slider" class="royalSlider heroSlider rsMinW">
-
-            <div class="large-12 columns rsContent">
-                <img class="rsImg" src="img/mana-collage.jpg" alt="">
-                
-            </div>
-
-            <div class="rsContent">
-                <img class="rsImg" src="img/carrusel/mana-future.jpg" alt="">
-                <div class="infoBlock top right rsABlock">
-                    <a href="#"></a>
-                    <h4>Mana Properties</h4>
-                    <p>With Clusters of properties located in the Biscayne Corridor our vision is to cultivate projects that complement their locations.</p>
+            <?php if ( have_posts() ) : ?>
+                <?php 
+                    query_posts( 'post_type=carrusel&posts_per_page=5' ); ?>
+                <?php while ( have_posts() ) : the_post(); ?>
+                <div class="large-12 columns rsContent">
+                    <?php the_post_thumbnail('large', array( 'class' => "rsImg")); ?>
+                    <div class="infoBlock top right rsABlock">
+                        <h4><?php the_title(); ?></h4>
+                        <p><?php echo get_the_excerpt(); ?></p>
+                    </div>
                 </div>
-                <div class="layout_black"></div>
-            </div>
-
-             <div class="rsContent">
-                <img class="rsImg" src="img/carrusel/coll-03.jpg" alt="">
-                <div class="infoBlock top right rsABlock">
-                    <a href="production.html#production-village"></a>
-                    <h4>Production Village</h4>
-                    <p>Nurturing Miami's cultural scene through quality productions & events.</p>
-                </div>
-                <div class="layout_black"></div>
-            </div>
-
-            <div class="rsContent">
-                <img class="rsImg" src="img/carrusel/home_4.jpg" alt="">
-                <div class="infoBlock top right rsABlock">
-                    <a href="events.html#art-basel"></a>
-                    <h4>Art Basel</h4>
-                    <p>Hosting some of Wynwood's top Art Basel events.</p>
-                </div>
-                <div class="layout_black"></div>
-            </div>
-
-            <div class="rsContent">
-                <img class="rsImg" src="img/carrusel/home_5.JPG" alt="">
-                <div class="infoBlock right top rsABlock">
-                    <a href="events.html"></a>
-                    <h4>Open Air Murals</h4>
-                    <p>With over 30 Acres in Wynwood, we have an impressive collection of Murals covering the outside wall of our properties.</p>
-                </div>
-                <div class="layout_black"></div>
-            </div>
-
+                <?php endwhile; ?>
+            <?php endif; ?>
         </div>
     </section>
 
@@ -72,21 +39,21 @@ get_header(); ?>
             <div class="large-12 columns">
                 <div class="large-3 new-content columns">
                     <a href="#"></a>
-                    <img src="img/properties.jpg">
+                    <img src="<?php bloginfo('template_url')?>/img/properties.jpg">
                     <h3>Properties</h3>
                     <p>In the Biscayne Corridor</p>
                     <span class="arrow-tine"></span>
                 </div>
                 <div class="large-3 new-content columns">
                     <a href="production.html"></a>
-                    <img src="img/production2.jpg">
+                    <img src="<?php bloginfo('template_url')?>/img/production2.jpg">
                     <h3>Production</h3>
                     <p>Cultivating Creative Venues</p>
                     <span class="arrow-tine"></span>
                 </div>
                 <div class="large-3 new-content columns">
                     <a href="events.html#art-basel"></a>
-                    <img src="img/ABW.jpg">
+                    <img src="<?php bloginfo('template_url')?>/img/ABW.jpg">
                     <h3>ART BASEL WEEK</h3>
                     <p>At Manawynwood</p>
                     <span class="arrow-tine"></span>
@@ -94,21 +61,21 @@ get_header(); ?>
                 <div class="large-3 new-content columns rs-default slide-events-home" id="slide-events-home">
                     <div class="rsContent left">
                         <a href="events.html"></a>
-                        <img src="img/arti.jpg">
+                        <img src="<?php bloginfo('template_url')?>/img/arti.jpg">
                         <h3>Events</h3>
                         <p>Art Installations</p>
                     </div>
 
                     <div class="rsContent left">
                         <a href="events.html"></a>
-                        <img src="img/events2.jpg">
+                        <img src="<?php bloginfo('template_url')?>/img/events2.jpg">
                         <h3>Events</h3>
                         <p>Live Music</p>
                     </div>
                     
                     <div class="rsContent left">
                         <a href="events.html"></a>
-                        <img src="img/production.jpg">
+                        <img src="<?php bloginfo('template_url')?>/img/production.jpg">
                         <h3>Events</h3>
                         <p>Open Air Murals</p>
                     </div>
