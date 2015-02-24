@@ -549,6 +549,16 @@ function twentythirteen_customize_register( $wp_customize ) {
 }
 add_action( 'customize_register', 'twentythirteen_customize_register' );
 
+function mw_add_thumbnail_sizes() {
+	
+
+	add_image_size( 'carrusel', 1623, 660, true );
+
+
+
+}
+add_action( 'init', 'mw_add_thumbnail_sizes',  100);
+
 /**
  * Enqueue Javascript postMessage handlers for the Customizer.
  *

@@ -18,10 +18,10 @@ get_header(); ?>
 
     <section class="main-slider">
         <div id="mana-slider" class="royalSlider heroSlider rsMinW">
-            <?php if ( have_posts() ) : ?>
-                <?php 
-                    query_posts( 'post_type=carrusel&posts_per_page=5' ); ?>
-                <?php while ( have_posts() ) : the_post(); ?>
+                <?php
+                query_posts( array( 'post_type' => 'slideshow', 'showposts' => 5 ) );
+                if (have_posts() ) : while(have_posts()) : the_post();
+                ?>
                 <div class="large-12 columns rsContent">
                     <?php the_post_thumbnail('large', array( 'class' => "rsImg")); ?>
                     <div class="infoBlock top right rsABlock">
@@ -29,8 +29,9 @@ get_header(); ?>
                         <p><?php echo get_the_excerpt(); ?></p>
                     </div>
                 </div>
-                <?php endwhile; ?>
-            <?php endif; ?>
+                <?php endwhile; endif;
+                wp_reset_query();
+                ?>
         </div>
     </section>
 
