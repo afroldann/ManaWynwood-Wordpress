@@ -165,18 +165,29 @@ function twentythirteen_scripts_styles() {
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) )
 		wp_enqueue_script( 'comment-reply' );
 
-	// Adds Masonry to handle vertical alignment of footer widgets.
-	if ( is_active_sidebar( 'sidebar-1' ) )
-		wp_enqueue_script( 'jquery-masonry' );
 
 	// Loads JavaScript file with functionality specific to Twenty Thirteen.
-	wp_enqueue_script( 'twentythirteen-script', get_template_directory_uri() . '/js/functions.js', array( 'jquery' ), '2014-06-08', true );
+	wp_enqueue_script( 'jQuery', get_template_directory_uri() . '/js/vendor/modernizr.js', array(), '2014-06-08', true );
+	wp_enqueue_script( 'jQuery', get_template_directory_uri() . '/js/vendor/jquery.js', array( 'jquery' ), '2014-06-08', true );
+	wp_enqueue_script( 'foundation', get_template_directory_uri() . '/js/vendor/foundation.min.js', array( 'jquery' ), '2014-06-08', true );
+	wp_enqueue_script( 'scrollTo', get_template_directory_uri() . '/js/vendor/scrollTo.js', array( 'jquery' ), '2014-06-08', true );
+	wp_enqueue_script( 'plugins', get_template_directory_uri() . '/js/vendor/plugins.js', array( 'jquery' ), '2014-06-08', true );
+	wp_enqueue_script( 'owl', get_template_directory_uri() . '/js/vendor/owl.carousel.min.js', array( 'jquery' ), '2014-06-08', true );
+	wp_enqueue_script( 'app', get_template_directory_uri() . '/js/app.js', array( 'jquery' ), '2014-06-08', true );
+	wp_enqueue_script( 'app-index', get_template_directory_uri() . '/js/app-index.js', array( 'jquery' ), '2014-06-08', true );
 
 	// Add Source Sans Pro and Bitter fonts, used in the main stylesheet.
 	wp_enqueue_style( 'twentythirteen-fonts', twentythirteen_fonts_url(), array(), null );
 
 	// Add Genericons font, used in the main stylesheet.
 	wp_enqueue_style( 'genericons', get_template_directory_uri() . '/genericons/genericons.css', array(), '3.03' );
+	wp_enqueue_style( 'rs', get_template_directory_uri() . '/css/royalslider.css', array(), '3.03' );
+	wp_enqueue_style( 'rsd', get_template_directory_uri() . '/css/rs-default.css', array(), '3.03' );
+	wp_enqueue_style( 'rsm', get_template_directory_uri() . '/css/rs-minimal-white.css', array(), '3.03' );
+	wp_enqueue_style( 'owl', get_template_directory_uri() . '/css/owl.carousel.css', array(), '3.03' );
+	wp_enqueue_style( 'rsm', get_template_directory_uri() . '/css/owl.transitions.css', array(), '3.03' );
+	wp_enqueue_style( 'fonudation', get_template_directory_uri() . '/css/foundation.min.css', array(), '3.03' );
+	wp_enqueue_style( 'app', get_template_directory_uri() . '/css/app.css', array(), '3.03' );
 
 	// Loads our main stylesheet.
 	wp_enqueue_style( 'twentythirteen-style', get_stylesheet_uri(), array(), '2013-07-18' );
