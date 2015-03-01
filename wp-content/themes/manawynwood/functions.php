@@ -200,6 +200,10 @@ function twentythirteen_scripts_styles() {
 	wp_enqueue_style( 'fonudation', get_template_directory_uri() . '/css/foundation.min.css', array(), '3.03' );
 	wp_enqueue_style( 'app', get_template_directory_uri() . '/css/app.css', array(), '3.03' );
 
+	if(is_page('gallery')){
+
+	}
+
 	// Loads our main stylesheet.
 	wp_enqueue_style( 'twentythirteen-style', get_stylesheet_uri(), array(), '2013-07-18' );
 
@@ -583,3 +587,43 @@ function twentythirteen_customize_preview_js() {
 }
 add_action( 'customize_preview_init', 'twentythirteen_customize_preview_js' );
 
+
+
+ function pw_show_gallery_image_urls( $content ) {
+
+ 	global $post;
+
+ 	// Only do this on singular items
+ 	if( ! is_singular() )
+ 		return $content;
+
+ 	// Make sure the post has a gallery in it
+ 	if( ! has_shortcode( $post->post_content, 'gallery' ) )
+ 		return $content;
+
+ 	// Retrieve all galleries of this post
+ 	$galleries = get_post_galleries_images( $post );
+
+	$image_list = '<ul>';
+
+	// Loop through all galleries found
+	foreach( $galleries as $gallery ) {
+
+		// Loop through each image in each gallery
+		foreach( $gallery as $image ) {
+
+			$image_list .= '<li>' . $image . '</li>';
+
+		}
+
+	}
+
+	$image_list .= '</ul>';
+
+	// Append our image list to the content of our post
+	$content .= $image_list;
+
+ 	return $content;
+
+ }
+ add_filter( 'the_content', 'pw_show_gallery_image_urls' );
