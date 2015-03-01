@@ -1,5 +1,45 @@
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 jQuery(document).ready(function($){
+
+	function scrollSite(){
+		var nice = $( 'html' ).niceScroll({
+			cursorwidth: 10,
+			cursorborder: 0,
+			zindex: 9
+		});
+		return nice; 
+	} scrollSite();
+
 	var oneMore = 0;
 	var hammerApp = {};
 	var url;
@@ -293,11 +333,6 @@ jQuery(document).ready(function($){
 		highlightSelector:"#navigation a"
 	});
 
-	jQuery('nav.main-menu a').click(function(){
-	    jQuery('nav.main-menu a').removeClass("active");
-	    jQuery(this).addClass("active");
-	    return false;
-	});
 
 	jQuery('.close').on('click', function(){
 		jQuery('.contact-container').slideUp();

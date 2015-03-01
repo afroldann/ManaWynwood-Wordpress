@@ -49,10 +49,10 @@
 	            <nav id="menu" class="nav-bar main-menu large-6 columns right">
 	                <div class="large-12 columns social right">
 	                    <ul class="large-4 columns right">
-	                        <li><a class="twitter"   href="#"></a></li>
-	                        <li><a class="facebook"  href="#"></a></li>
-	                        <li><a class="instagram" href="#"></a></li>
-	                        <li><a class="vimeo"  href="#"></a></li>
+	                        <li><a class="twitter"   target="_blank" href="<?php echo of_get_option('twitter_link') ?>"></a></li>
+	                        <li><a class="facebook"  target="_blank" href="<?php echo of_get_option('facebook_link') ?>"></a></li>
+	                        <li><a class="instagram" target="_blank" href="<?php echo of_get_option('instagram_link') ?>"></a></li>
+	                        <li><a class="vimeo"  	 target="_blank" href="<?php echo of_get_option('vimeo_link') ?>"></a></li>
 	                    </ul>
 	                    <div class="suscribe large-4 columns right">
 	                        <input type="text" placeholder="subscribe">

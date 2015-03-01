@@ -105,6 +105,17 @@ function twentythirteen_setup() {
 
 	// This theme uses its own gallery styles.
 	add_filter( 'use_default_gallery_style', '__return_false' );
+
+	if (class_exists('MultiPostThumbnails')) {
+	    new MultiPostThumbnails(
+	        array(
+	            'label' => 'Secondary Image',
+	            'id' => 'secondary-image',
+	            'post_type' => 'team'
+	        )
+	    );
+	}
+	add_image_size('team-secondary-image-thumbnail', 176, 58, true);
 }
 add_action( 'after_setup_theme', 'twentythirteen_setup' );
 
@@ -172,7 +183,7 @@ function twentythirteen_scripts_styles() {
 	wp_enqueue_script( 'foundation', get_template_directory_uri() . '/js/vendor/foundation.min.js', array( 'jquery' ), '2014-06-08', true );
 	wp_enqueue_script( 'scrollTo', get_template_directory_uri() . '/js/vendor/scrollTo.js', array( 'jquery' ), '2014-06-08', true );
 	wp_enqueue_script( 'plugins', get_template_directory_uri() . '/js/vendor/plugins.js', array( 'jquery' ), '2014-06-08', true );
-	wp_enqueue_script( 'owl', get_template_directory_uri() . '/js/vendor/owl.carousel.min.js', array( 'jquery' ), '2014-06-08', true );
+	wp_enqueue_script( 'scroll', get_template_directory_uri() . '/js/jquery.nicescroll.min.js', array( 'jquery' ), '2014-06-08', true );
 	wp_enqueue_script( 'app', get_template_directory_uri() . '/js/app.js', array( 'jquery' ), '2014-06-08', true );
 	wp_enqueue_script( 'app-index', get_template_directory_uri() . '/js/app-index.js', array( 'jquery' ), '2014-06-08', true );
 
@@ -571,3 +582,4 @@ function twentythirteen_customize_preview_js() {
 	wp_enqueue_script( 'twentythirteen-customizer', get_template_directory_uri() . '/js/theme-customizer.js', array( 'customize-preview' ), '20141120', true );
 }
 add_action( 'customize_preview_init', 'twentythirteen_customize_preview_js' );
+

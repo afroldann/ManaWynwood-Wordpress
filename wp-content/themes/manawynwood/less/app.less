@@ -647,8 +647,8 @@ html {
 							border-radius: 0;
 							color: @w-gray-menu;
 							background: @w-transparent;
-							margin: 0 0 10px 0;
-							height: 35px;
+							margin: 0 0 6px 0;
+							height: 30px;
 						}
 						textarea {
 							border: solid @w-gray-field 1px;
@@ -724,7 +724,7 @@ html {
 			top: 0;
 			left: 0;
 			height: 153px;
-			z-index: 100;
+			z-index: 15;
 
 			.transition;
 			
@@ -812,6 +812,9 @@ html {
 							list-style: none;
 
 							li {
+								&:first-child {
+									margin-left: 40px
+								}
 								a {
 									font-family: 'HelveticaNeueCondensedBold', helvetica;
 									color: @w-gray-text;
@@ -1065,6 +1068,7 @@ html {
 			 	font-family: 'HelveticaNeueCondensedBold', helvetica;
 			 	color: @w-gray-menu;
 			 	font-size: 1rem;
+			 	margin: 20px 0;
 			}
 			.social-f {
 				h2 {
@@ -1206,6 +1210,9 @@ html {
 						font-size: 0.8rem;
 						&:hover {
 							color: @w-gray-text;
+						}
+						&:visited {
+							color: @w-gray-menu;
 						}
 					}
 				}

@@ -14,18 +14,11 @@
         <div class="row">
             <div class="large-12 columns">
                 <div class="rights-f large-3 columns">
-                    <p>@2014 MANAWYNWOOD. All rights reserved.</p>
+                    <p>@2014 MANAWYNWOOD.</p>
                 </div>
                 <div class="about-f large-3 columns">
                     <h2>ABOUT US</h2>
-                    <ul>
-                        <li><a class="link" href="about-us.html#wynwood">MANAWYNWOOD</a></li>
-                        <li><a class="link" href="production.html#production-village">PRODUCTION VILLAGE</a></li>
-                        <li><a class="link" href="#">PROPERTIES</a></li>
-                        <li><a href="#" data-reveal-id="map">MAP</a></li>
-                        <li><a class="link" href="about-us.html#team">TEAM</a></li>
-                        <li><a href="#" class="contact-button link">CONTACT US</a></li>
-                    </ul>
+                    <?php wp_nav_menu( 'footer_menu' ); ?>
                 </div>
                 <div class="touch-f large-3 columns">
                     <h2>GET IN TOUCH</h2>
@@ -41,10 +34,10 @@
                 <div class="social-f large-3 columns">
                     <h2>SOCIAL</h2>
                     <ul class="large-4 columns left">
-                        <li><a class="twitter link"   href="#"></a></li>
-                        <li><a class="facebook link"  href="#"></a></li>
-                        <li><a class="instagram link" href="#"></a></li>
-                        <li><a class="vimeo link"  href="#"></a></li>
+                        <li><a class="twitter" target="_blank"  href="<?php echo of_get_option('twitter_link') ?>"></a></li>
+                        <li><a class="facebook"  target="_blank"  href="<?php echo of_get_option('facebook_link') ?>"></a></li>
+                        <li><a class="instagram" target="_blank"  href="<?php echo of_get_option('instagram_link') ?>"></a></li>
+                        <li><a class="vimeo" target="_blank"  href="<?php echo of_get_option('vimeo_link') ?>"></a></li>
                     </ul>
                     <h2>LEGAL</h2>
                     <p><a href="img/Privacy-Policy-Temp.pdf" target="_blank">Privacy Policy</a></p>
